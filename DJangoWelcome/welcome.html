@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    {% if name and email %}
+    <h1>De ingevulde gegevens zijn:</h1>
+    <p>Naam: {{ name }}</p>
+    <p>Emailadres: {{ email }}</p>
+    {% endif %}
+
+    <form method="get" action="{% url 'welcome' %}">
+    <label for="naam">Naam:</label>
+    <input type="text" name="naam" required>
+    <br>
+    <label for="email">Emailadres:</label>
+    <input type="email" name="email" required>
+    <br>
+    <button type="submit">Verzenden</button>
+</form>
+
+</body>
+</html>
+
+
+<!--
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  </head>
+  <body>
+    <form method="get"> 
+        <label action="/your-name/" method="post"></label>
+        <label for="your_name"> Fill in your name: </label>
+        <input id="your_name" type="text" name="your_name" value="{{current_name}}">
+
+        <label action="/your-email/" method="get">
+        <label id="your_email"> Fill in your email: </label>
+        <input id="your_email" type="text" name="your_name" value="{{current_email}}">
+    </form>
+  </body>
+</html>
+
+-->
